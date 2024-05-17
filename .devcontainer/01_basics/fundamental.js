@@ -42,4 +42,66 @@
             Document
     Javascript has security issues
     Trozen and virus 
+    
+    JavaScript Output methods
+    ------------------------
+    alert() alert has no cancel option 
+    confirm() confirm has cancel option but we need to add logic for cancel confirm return true on cancel and on click of 
+    console methods [log(), debug(), error(), warn()..]
+    document.write()
+    innerHTML
+    outerHTML
+    innerText
+    
+    document.write()= it can display op a new screen not new page 
+    page will be same but op will be on new screen it allows markup all html tag like h2 href
+    innerText: it can dispaly output in any record
+    innerHtml: it can display html 
+
+    how we can write JS
+        inline js 
+        embaded js 
+
+        Inline js
+        ---------
+        js functions are written within the element
+        Reusability ISSUes
+        separation 
+
+        Embaded
+        --------
+        you can write js funtions embeded within the page by using <script> elememts
+        where to embed we can use in head section or body 
+        difernce of writin head and body is ==>if we expection some functions to load into memory and from memory they need to accessed whenever required then we have to keep in with section head 
+        
+        MIME Type for js will be <script type = "texy/javascript"></script>
+        MIME can be text/javascript, text/module, text/bable, text/jsx
+        <!-- <script>
+     x = 10 // not decalre variable
+    document.write(
+       'x =' + x
+    );
+</script> -->
+<script>
+    "use strict"
+     var x = 10 
+    document.write(
+       'x =' + x
+    );
+</script>
+
+
+without folowing standard we are riting code here 
+ so strict mode will not allows developers to violate the standards of coding. it will reduce code
+ inconsitency 
+
+ how to turn on strict mode you have to write following before any
+ function or statement [as 1st line]"use strict";
+
+ faq: how to target js for legacy browsers
+      legacy means old browsers , on old version browsser dosent supprot latest version js
+      new 2**3 = 8
+      old Math.pow(2,3)
+      how to target old version
+
 */
