@@ -103,5 +103,43 @@ without folowing standard we are riting code here
       new 2**3 = 8
       old Math.pow(2,3)
       how to target old version
+External file 
+    js function are writeen in a separate file that have extension ".js"
+    you have to link script files by using script element 
+    you can access across page 
+    faq: what is minification : it reduces the size 
+    it is the process of compressing js file we can define prin.min.js
+    when to use minified file = uncomressed files are used for development
+    minified file are used in production
+    What are the issues with js
+    1. js is explicitly strictly typed
+    2. js is not strongly typed
+    3. js is not statically typed
+        ex: x = 10 x is number
+            x = 'A' x is string
+            Age = '2A' valid
+    4. js will not supprot complete OOP 
+    5. security issues
+    6. js depends on lot of dom manipulations
+    7. lots of coding 
+    8. heavy on application
+    9. Explicitly handle browser compatbility
+    Solution:
+    -TypeScript 
+    How hs take control over html elements?
+    ans: by using various refernce methods
+        1. By using DOM Hierarchy 
+        prompt("your message", "default value")
+ prompt("your message")
+ click ok without value : return empty string " "
+ click ok with value : return value
+ click cancel : return null
+ for input elements you can use HTM form elements for input
+    a.Textbox
+    b.CheckBox
+    c.Radio
+    d.ListBox etc
+
+
 
 */

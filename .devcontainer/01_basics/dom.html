@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dom Understanding</title>
+    <script>
+        function bodyload(){
+            window.document.images[0].src= "../man.png";
+            window.document.forms[0].elements[1].value = "Register"; //but its not good approach
+
+        }
+    </script>
+  </head>
+  <body onload="bodyload()">
+    <div>
+      <img width="100" height="100" border="1" />
+    </div>
+    <div>
+      <form>
+        <h3>Registration form</h3>
+        user Name : <input type="text" /> <input type="button" />
+      </form>
+    </div>
+    <div>
+      <form>
+        <h3>Login Form</h3>
+        Email: <input type="email" /> <input type="button" />
+      </form>
+    </div>
+  </body>
+</html>
+/*
+  js input techniiques 
+    1.prompt() = it is similat to alert or configure but it can allow user 
+                to input a value [String input]
+    2. from input elements
+*/
