@@ -1,0 +1,97 @@
+
+<script>
+    // prompt( document.write("Enter you name"));
+    // document.write(prompt("Enter your name"));
+    // variable = prompt
+    // function namePlease(){
+    //     var x; //Declaring
+    //     x =10; //Assigning
+    //     if (x == 10){
+    //         var y = 20; //intialization
+    //         y = 30 //assignment
+    //         var y = 50; //Shadowing
+    //     }
+    //     document.write("x=" +x + "<br>" + "Y =" +y)
+    // }
+    // namePlease()
+
+    // function hoistingEx(){
+    //     "use strict";
+    //     x = 10;
+    //     document.write("x = " +x);
+    //     var x ; //hoisting
+    // }
+    // hoistingEx();
+    
+    // function letEx(){
+    //     let x;
+
+    // }
+    // letEx();
+         var x = 10;
+         let y =20;
+         let z = 30;
+    function f1(){
+        document.write("f1 x,y,z" +x+","+y+","+z)
+    }
+    function f2(){
+        document.write("f1 x,y,z" +x+","+y+","+z)
+    }
+    f1();
+    f2();
+</script>
+<!-- variable in js =  variables are storage location in memory
+    Variable configuration contains 3 phase 
+    Decalaration 
+    Assignment
+    Intialization
+    2. js variabele can be used directly without declaring if strict mode is off
+    3. js variable can be ddecalre using 3 key words
+        .var
+        .let
+        .const
+    ex:     var x; Declaration
+            x = 20; Assignment
+            var y = 30; intialization 
+    4. Var : id defines scope variable.
+            .you can access from any location in function
+            you can declare in any block and access from any another block
+            . it support shadowing
+            .Shadowing is a technique where you can redeclare the same name identifier.
+            .Var supports shadowinf
+            .Var supports hoisting = you can declare after using
+
+    Let
+    ------
+    .It define block scope variable.
+    . It is accessible to the same block and its inner blocks
+    .It is not accesible to outer block
+    .It will support declaring, assigning and intialization 
+    .It will not suppor shadowing and hoisting
+
+    const
+    -------
+    .It is also block scope
+    .const will not allow declaring and assignin
+    . it will allow only intialization
+    .it will not allow hoisitng and shadowing
+
+    Global Scope for variable
+    -----------------
+    you can declare a variable outside functuion then its global
+    you can use var, let, const 
+    . we can declare global variable using const 
+
+    Variable Naming
+    .Name must start with alphabte or _
+    .name can have numbers ans special chars
+    .cants start with number or other special chars
+    .no spaces and no periods[.]
+    .length must be max 255 chars
+    .meaning of _ as per developer rule it needs to implement
+    further implementation is required
+
+    another imp concepts 
+
+   
+-->

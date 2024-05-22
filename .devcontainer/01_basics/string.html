@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function DeleteName(){
+            // alert ('Hello you want to delete')
+            console.warn('button is clicked')
+            flag = confirm ('Hello you want to delete')
+            if (flag == true){
+                alert ('You have deleted')
+                //console.alert(' it is deleted')
+                //document.write('recod delete')
+                document.querySelector('h3').innerText = 'recod deleted'
+            }else{
+                alert ('You have not deleted')
+                console.log('not deleted')
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteName()">Delete</button>
+    <h3 ></h3>
+</body>
+</html>

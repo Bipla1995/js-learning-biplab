@@ -1,0 +1,24 @@
+<!-- <script>
+    var userDetails = "Biplab Kumar";
+    var[fstname, lstName] = userDetails.split(" ");//Destructuring Modern Technique
+    document.write("first name =" +fstname +"<br>");
+    document.write("Last name=" +lstName);
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function removeName(){
+            var userInput = document.getElementById("nameinput").value;
+            var[firstName,LastName] = userInput.split(" ");
+            document.write(firstName + "<br>" + LastName)
+        }
+    </script>
+</head>
+<body>
+    Enter full Name :
+    <input type="text" id="nameinput" onblur="removeName()">
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!-- <script>
+    var stock = true;
+    if(stock == true){
+        document.write("available")
+    }else{
+        document.write("out of stock")
+    }
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Boolean</title>
+    <script>
+        function chnageLebel(){
+          var optstock = document.getElementById("optStock");
+          var lblCheckbox = document.getElementById("lblCheckBox");
+          if(optstock.checked == true){
+            lblCheckbox.innerHTML = "available";
+          }else{
+            lblCheckbox.innerHTML = "out of stock";
+          }
+        }
+        function verifyNumber(){
+            var cardNum = document.getElementById("txtCard").value;
+            if(cardNum == "111122223333"){
+                document.getElementById("textCvv").disabled = false;
+                document.getElementById("textCvv").focus();
+
+            }else{
+                document.getElementById("textCvv").disabled = true;
+            }
+        }
+        function verifyCVV(){
+            var cvv = document.getElementById("textCvv").value;
+            if(cvv=="2345"){
+                document.getElementById("btnPay").disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Stock</h3>
+    <div class="form-switch">
+        <input type="checkbox" class="form-check-input" checked onchange="chnageLebel()" id="optStock"> <span id = "lblCheckBox">Available</span>
+    </div>
+    <h2> payment details</h2>
+    <dl>
+        <dt>Card Number</dt>
+        <dd><input type="text" id="txtCard" onkeyup="verifyNumber()"></dd>
+        <dt>CVV</dt>
+        <dd><input type="text" disabled id="textCvv" size="4" onkeyup="verifyCVV()"></dd>
+        <button id="btnPay" disabled>Pay</button>
+    </dl>
+</body>
+</html>
+<!-- boolean typs are used ton decision making
+Decision making is the process of controlling the execution flow.
+boolean type can handle 2 values
+true
+flase
+js boolean can handle numeric values
+1 = true 
+0 =false 
+always recomemnde to tuse boolean true or flase as kewords for costructing boolean expression
+FAQ: What are the form element attributs that use boolean state?
+    ans: 
+    chcked: boolean
+    readonly : boolean
+    selected: boolean
+    disabled : boolean
+
+-->

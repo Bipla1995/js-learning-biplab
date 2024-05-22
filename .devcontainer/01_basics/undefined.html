@@ -1,0 +1,40 @@
+<!-- <script>
+    var price;
+    if (price == undefined){
+        document.write("price is requried");
+    }
+   else{
+    document.write("price =" +price)
+   }
+</script> -->
+<script>
+    var price = prompt("Enter price")
+    if(price == null){
+        document.write("you have cancelled");
+    }else if(price == ""){
+        document.write("Price required");
+    }
+    else{
+        document.write("price =" +price);
+    }
+</script>
+<!-- Undefined Type 
+-it is a type of js which specifes that value is not deifined into any given refernce
+-undefined is the type configured at compilt time
+-faq: What is differnce betwwen undefined and not defined?
+        ans: undefinde is to verify the value.
+        not-defined is to verify the refernce.
+Null Type
+.Null is the type defined for any refernce that is expecting value
+during run time
+.if value is not supplied into a refernce 
+.Difernce between null and undefine 
+ 
+ Summary:
+    Primitive types are immutable types
+    number
+    string
+    boolean
+    null 
+    undefined
+-->

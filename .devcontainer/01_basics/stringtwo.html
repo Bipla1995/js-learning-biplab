@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email</title>
+    <script>
+        function verifyEmail(){
+            var email = document.getElementById("txtEmail").value;
+            var msgvalid =document.getElementById("msg");
+            // document.write(email,msg)
+            if (email.indexOf("@")==-1){
+                msg.innerHTML = "Please enter a valid email address";
+            }else{
+                msg.innerHTML = "Email is valid";
+            }
+        };
+        function verifyCard(){
+            var cardNumber = document.getElementById("txtCard").value;
+            var pic = document.getElementById("pic");
+            if(cardNumber.startsWith("4444")){
+                pic.src ="../visa.jpg"
+            }
+            else if(cardNumber.startsWith("5555")){
+                pic.src ="../master.jpeg"
+            }else{
+                pic.src ="";
+                pic.alt = "invalid";
+            }
+        };
+        function verifySkype(){
+            var skype = document.getElementById("skypeid").value;
+            var message = document.getElementById("msgskype");
+            if(skype.endsWith("outlook.com")){
+                message.innerHTML = "";
+            }else{
+                message.innerHTML = "skype address must be outlook domain";
+                message.style.color = "red"
+            }
+
+        };
+        function verifyUserName(){
+            var usernamevrify = document.getElementById("userName").value;
+         
+            if (usernamevrify.trim() = "biplab"){
+                document.write("user valid")
+            }else{
+                document.querySelector("div").innerHTML = "invalid use id";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    Email : 
+    <input type="text" id="txtEmail"> <button onclick="verifyEmail()">submit</button>
+    <dt id = "msg"></dt>
+
+    <dl>
+        <dt>Card Number</dt>
+        <dd >
+            <input type="text" id="txtCard" onkeyup="verifyCard()" > 
+            <img width="80px" id="pic" height="40px" class="input-group-text">
+        </dd>
+        <dt>Skype Address</dt>
+        <dd class="input-group"><input type="text" id="skypeid" onblur="verifySkype()" class="form-group"></dd>
+        <dd id="msgskype"></dd>
+        <dt>User name</dt>
+        <dd >
+            <input type="text" id="userName" onblur="verifyUserName()">
+            <div></div>
+        </dd>
+    </dl>
+</body>
+</html>
+
+<!-- -startsWith() : it returns true if string starts with specified charecter.
+     -endsWith() : it returns true if string ends with specified chars.
+     -trim() : it is used to remove leading spaces [before and after the string]
+     -split() : it splits the string at specified delimete
+                it returns an array
+
+-->

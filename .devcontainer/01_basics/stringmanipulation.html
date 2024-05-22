@@ -1,0 +1,73 @@
+<script>
+    var msg = "welCOme to JavaScrIPT";
+    var firstchar = msg.charAt(0);
+    var restchar = msg.substring(1);
+    var sentence = firstchar.toLocaleUpperCase() + restchar.toLocaleLowerCase();
+    document.write(sentence);
+</script>
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Striog</title>
+    <style>
+        .invalid-style{
+            border:2px solid red;
+            box-shadow: 2px 2px 3px red;
+        }
+        .valid-style{
+            border:2px solid green;
+            box-shadow: 2px 2px 3px green;
+        }
+    </style>
+    <script>
+        function verifyUser(){
+            var name = document.getElementById("username");
+            var usemsg = document.getElementById("usermsg");
+            if(name.value.length<4){
+                usemsg.innerHTML = "Length is too short".fontcolor('red');
+                name.className = "invalid-style";
+            }else{
+                usemsg.innerHTML = "Name verified....".fontcolor('green');   
+                name.className = "valid-style";
+            }
+        }
+        function changeCase(){
+            var name = document.getElementById("username").value;
+            document.getElementById("username").value = name.toUpperCase();
+        }
+    </script>
+  </head>
+  <body>
+    <dl>
+      <dt>User Name</dt>
+      <dd><input type="text" placeholder="Name Block Letters only" onblur="changeCase()" id="username" onkeyup="verifyUser()"/></dd>
+      <dd id="usermsg"></dd>
+    </dl>
+  </body>
+</html> -->
+
+<!-- all string formatting methods render <HTML></HTML>
+fontcolor('red') 
+Style attributes are reffered in camelCase
+    background-color backgroundColor
+    font-size fontSize
+Style attributes are not applied to string they are applied to element that handles string 
+String Formating methods
+=======================
+String manipulation method
+-charAt()
+-charCodeAt()
+-subString()
+-subStr()
+-slice()
+-length
+-indexOf() : It returns the index number of specified char.
+            if char not found then it returns -1.
+
+-LastIndexOf(): it finds the last occurance index number of char
+    ex: str = "Welcome";
+    str.lastIndexOf("e"); // 6
+    st.indexOf("e");
+
+Ex:
+-->
