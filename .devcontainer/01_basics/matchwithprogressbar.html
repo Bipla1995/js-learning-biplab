@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Password</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function ValidatePassword(){
+            var inputfield = document.getElementById("passwordInput").value;
+            var regex = /(?=.*[A-Z])\w{8,10}/;
+            var statusbar = document.getElementById("status");
+            var statusTex = document.getElementById("statusText");
+            if(inputfield.match(regex)){
+                statusbar.style.width = "100%";
+                statusTex.innerHTML = "Stronng Password";
+                statusbar.className = "bg-success progress-bar-striped progress-bar-animated";
+                statusTex.className = "text-center"
+            }else if(inputfield == ""){
+                statusbar.style.width = "0%";
+                    
+            }
+            else{
+                if(inputfield.length<4){
+                    statusbar.style.width = "20%";
+                    statusTex.innerHTML = "Poor Password";
+                }else{
+                    statusbar.style.width = "70%";
+                    statusTex.innerHTML = "Week Password";
+                }
+            }
+  
+        }
+    </script>
+</head>
+<body class="container">
+    <dl class="pt-4">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Password" onkeyup="ValidatePassword()">
+          </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" id="status" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                <span id="statusText"></span>
+            </div>
+          </div>
+    </dl>
+   
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+</body>
+</html>

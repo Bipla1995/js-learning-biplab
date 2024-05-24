@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dyanamic Element</title>
+    <!-- <script>
+      function createClick() {
+        var pic = document.createElement("img");
+        pic.width = "100";
+        pic.height = "100";
+        pic.border = "2";
+        pic.src = "../visa.jpg";
+        document.querySelector("div").appendChild(pic);
+      }
+    </script> -->
+    <script>
+      function loadCategory() {
+        var categories = ["all", "electronics", "Footware"];
+        for (var category of categories) {
+          var li = document.createElement("li");
+          li.innerHTML = category;
+          document.querySelector("ol").appendChild(li);
+
+          var option = document.createElement("option");
+          option.text = category.toUpperCase();
+          option.value = category;
+          document.querySelector("select").appendChild(option);
+
+          var tr = document.createElement("tr");
+          var td = document.createElement("td");
+          td.innerHTML = category
+          tr.appendChild(td);
+          document.querySelector("tbody").appendChild(tr);
+
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="loadCategory()">Load Categories</button>
+    <h2>Categories</h2>
+    <ol>
+        
+    </ol>
+    <h2>Select Categories</h2>
+    <select></select>
+    <h2>Categories</h2>
+    <table border="1" width="300">
+      <thead>
+        <tr>
+          <th>Categories</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+    <!-- <button onclick="createClick()">Create Element</button>
+    <div></div> -->
+  </body>
+</html>

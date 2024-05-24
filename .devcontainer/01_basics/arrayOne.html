@@ -1,0 +1,141 @@
+<script>
+    var values = new Array ();
+    values[0] = "biplab";
+    values["1"] = 20;
+    values[2] = "A";
+    values[3] = true;
+    values["4"] = 20;
+    for(var property in values){
+        document.write(`${property} [${typeof property}] - ${values[property]} [${typeof values [property]}}]`)
+    }
+</script>
+<script>
+    var valueTw0 = [10,"tv", true, ["delhi","odisha"], function(){document.write("Hi Biplab"+"<br>")}]
+    document.write(valueTw0[3][1] + "<br>");
+    valueTw0[4]()
+</script>
+<script>
+    var categories = ["Electronic","software","fashion"];
+    document.write(categories.toString());
+</script>
+<script>
+    var categories = ["Electronic","software","fashion"];
+    document.write(categories.join("@"));
+</script>
+<script>
+    var categories = ["Electronic","software","fashion"];
+    document.write(categories.slice(1,2));
+</script>
+<!-- //find wii accept a callback with returning one value -->
+<script>
+    var categories = [10000,15000,20000,25000,30000,35000,40000];
+       var op =  categories.find(function(value){
+            return value > 20000;
+        })
+        document.write("Find using" +op + "<br>");
+</script>
+<script>
+    var categories = [10000,15000,20000,25000,30000,35000,40000];
+       var values =  categories.filter(function(value){
+            return value > 20000;
+        })
+        document.write("using filter " + values.toString() + "<br>");
+</script>
+<script>
+    var categories = ["Electronic","software","fashion"];
+    categories.map(function(values){
+        document.write(`<h1>${values}<h1>`)
+            
+    })
+</script>
+
+<!-- Array 
+=====
+Configuring Array:
+    Array configuration comprises of 2 phases
+        a) Declaration
+        b) Intialization or Assignment of memory
+        .Declartion is same ad general variable
+            ex: var product;
+                led name;
+        .Intialization or Assignment of memory is mandetory
+        .Memory is assigend or intialized for array by using 2 methods
+            a. [] Meta charecter
+            b. Array() Constructor
+            var products = [] //Intialization
+            var products = new Array();
+                        or
+            var products;
+            product = [] //Assignment
+            products = new Array();
+            [] allows range of value | allows multiple values
+            new array()
+            new => Dynamic Memory Allocating Operator
+            Array() => Creates an array in memory
+            () => Constructor
+            (size) => While consturcting array you can define size, but size is not constant
+
+            Storing values in Array
+            =======================
+            Values are stored in array with refernce of its property
+            Values are stored in array with refernce of its property
+            array property maps to its index Number
+            propert "0" => index 0
+            value[0]
+            value["0"]
+            .you can store any type of value in Array, it can be primitive or non-primitive or function
+
+            Array Manipulations
+            ===================
+            Read Array elements
+            1. toString()
+            2.join()
+            3.slice()
+            4.find()
+            5.filter()
+            6.map()
+            7.for iterator
+            8.for loop
+            
+           @ toString() : it uses "," delimeter
+           @ join() : it uses custom delimeter
+           @ slice():
+           @find() : it will search for value based on given condition and return the first occurance value.
+           @filter() :it is similar to find but it returns all values that match the 
+                        Condition
+            @map() :  it is implicit iterator, reads every element and presents using markup.
+            for..in : [it is used to read all properties not values]
+            for..of : [it is used to read all values]
+
+            1. Creating an new html element dynamically
+                var ref = document.createElement();
+            2. Define properties element 
+                ref.name
+                ref.id
+                ref.src
+                ref.setAttribute("id","myid");
+                Note: you can use only properties not attribute
+                class className
+                src    src
+                table-height height is not a property of table
+            How to the properties of an element?
+            for ex:
+                <script>
+                    var table = document.createElement("table");
+                    for(var property in table){
+                        document.write(property + "<br>");
+                    }
+                </script>
+            3. Add element into its parent or any container.
+                appendChild()
+            4. Iterators for reading Array Elements
+                1. for..in : it read and returns all properties
+                2. for..of : it read and returns all values
+                syntax: 
+                        for(var property in collection){}
+                        for (var value of collection){}
+
+            Ex: Add Array Elements into page using HTML nodes 
+            
+
+ -->
