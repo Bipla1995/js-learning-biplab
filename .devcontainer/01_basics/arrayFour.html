@@ -1,0 +1,15 @@
+<script>
+    var category = ["footware","electronics","lifestyle"];
+    //category.push("fan", "hairstyle")//this wiil push the elemnts at last
+    //category.unshift("fan", "hairstyle") //this wiil push the elemnts at first
+    category.splice(1,2,"fan", "hairstyle")
+    for(var item of category){
+        document.write(item + "<br>");
+    }
+    // category.map(function cat(item){
+    //     document.write(item);
+    // })
+    // category.forEach(function name(item){
+    //     document.write(item);
+    // })
+</script>
